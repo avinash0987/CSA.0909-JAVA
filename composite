@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Composite {
+    public static void main(String[] args) {
+        int a,b,i;
+        Scanner obj=new Scanner(System.in);
+        System.out.println("enter num1: ");
+        a=obj.nextInt();
+        System.out.println("enter num2: ");
+        b=obj.nextInt();
+        System.out.print("fibonacci series: ");
+        for(i=a+1;i<=b;i++)
+        {
+            if(i%2==0 || i%3==0)
+            {
+                System.out.print(i+",");
+            }
+        }
+    }
+}
