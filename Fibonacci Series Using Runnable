@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Fibonacci implements Runnable {
+    int count;
+Fibonacci(int count) {
+        this.count = count;
+    }
+public void run() {
+int a = 0, b = 1;
+for (int i = 0; i < count; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        System.out.println();
+    }
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of terms for Fibonacci series:");
+        int terms = sc.nextInt();
+
+        Thread fib = new Thread(new Fibonacci(terms));
+        fib.start();
+    }
+}
